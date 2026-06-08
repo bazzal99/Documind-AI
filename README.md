@@ -14,7 +14,7 @@
 
 DocuMind AI is a **production-grade** document intelligence system that lets users upload documents and query them using a multi-agent AI pipeline. Unlike simple RAG systems, DocuMind uses a **LangGraph supervisor agent** that autonomously decides how to answer each query — whether to retrieve, summarize, or answer directly.
 
-Every query logs a full **agent execution trace** (which nodes ran, latency, token usage), making the system fully observable and debuggable — exactly what production AI teams need.
+Every query logs a full **agent execution trace** (which nodes ran, latency, token usage), making the system fully observable and debuggable, exactly what production AI teams need.
 
 ---
 
