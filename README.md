@@ -36,17 +36,17 @@ Every query logs a full **agent execution trace** (which nodes ran, latency, tok
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                        Streamlit UI                          │
-│                     localhost:8501                           │
+│                     Streamlit UI                            │
+│                     localhost:8501                          │
 └─────────────────────┬───────────────────────────────────────┘
-                       │ HTTP
+                      │ HTTP
 ┌─────────────────────▼───────────────────────────────────────┐
-│                   FastAPI Backend                            │
-│              Auth · Documents · Query                        │
-│                     localhost:8000                           │
+│                   FastAPI Backend                           │
+│              Auth · Documents · Query                       │
+│                     localhost:8000                          │
 └──────┬──────────────┬──────────────┬────────────────────────┘
        │              │              │
-┌──────▼──────┐ ┌─────▼──────┐ ┌────▼────────────────────────┐
+┌──────▼──────┐ ┌─────▼──────┐ ┌──── ▼────────────────────────┐
 │ PostgreSQL  │ │   Redis    │ │      LangGraph Agent         │
 │  Users      │ │  Sessions  │ │                              │
 │  Documents  │ │  Rate      │ │  Supervisor → routes query   │
